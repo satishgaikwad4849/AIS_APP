@@ -9,7 +9,11 @@
       android:icon="@mipmap/ic_launcher"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
-      android:theme="@style/AppTheme">
+      android:theme="@style/AppTheme"
+       android:usesCleartextTraffic="true">
+        <meta-data
+     android:name="com.google.android.geo.API_KEY"
+     android:value="AIzaSyAe30usFRaVwojBxOgEWBG39HLojPdQ2Fo"/>
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -22,6 +26,11 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+        <!-- You will only need to add this meta-data tag, but make sure it's a child of application -->
+ 
+  
+   <!-- You will also only need to add this uses-library tag -->
+   <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 
 </manifest>
